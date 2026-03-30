@@ -22,7 +22,9 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# lib/ — only ignore Python build artifacts, NOT frontend/lib/
+/lib/
+backend/lib/
 lib64/
 parts/
 sdist/
