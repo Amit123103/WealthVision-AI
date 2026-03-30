@@ -1,7 +1,6 @@
 fastapi==0.104.1
 uvicorn==0.24.0
 sqlalchemy==2.0.23
-geoalchemy2==0.14.2
 psycopg2-binary==2.9.9
 asyncpg==0.29.0
 alembic==1.12.1
@@ -10,13 +9,13 @@ pydantic-settings==2.1.0
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 python-multipart==0.0.6
-celery==5.3.6
-redis==5.0.1
 boto3==1.33.2
-torch==2.1.1
-torchvision==0.16.1
 Pillow==10.1.0
 slowapi==0.1.8
 matplotlib==3.8.2
 redis==5.0.1
 httpx==0.25.1
+# torch and torchvision removed for Vercel deployment (exceeds 250MB limit + no Python 3.12 wheels)
+# For local development with AI inference, install separately:
+#   pip install torch==2.1.1 torchvision==0.16.1
+# celery and geoalchemy2 removed (require external services not available on Vercel serverless)
